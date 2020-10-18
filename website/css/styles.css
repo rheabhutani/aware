@@ -1994,7 +1994,7 @@ pre code {
 }
 
 .form-control {
-  margin-top: 50%;
+  margin-top: 8px;
   display: block;
   width: 100%;
   height: calc(1.5em + 1rem);
@@ -2013,7 +2013,7 @@ pre code {
 
 @media (prefers-reduced-motion: reduce) {
   .form-control {
-    transition: none;
+    transition: ease;
   }
 }
 .form-control::-ms-expand {
@@ -2038,7 +2038,7 @@ pre code {
 }
 .form-control::-webkit-input-placeholder {
   color:blue;
-  opacity: 1;
+  opacity: 0.7;
   margin-bottom: 0.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
@@ -2048,7 +2048,7 @@ pre code {
 
 .form-control::-moz-placeholder {
   color: blue;
-  opacity: 1;
+  opacity: 0.7;
   margin-bottom: 0.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
@@ -2058,7 +2058,7 @@ pre code {
 }
 .form-control:-ms-input-placeholder {
   color: white;
-  opacity: 1;
+  opacity: 0.7;
   margin-bottom: 0.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
@@ -2068,7 +2068,7 @@ pre code {
 }
 .form-control::-ms-input-placeholder {
   color: white;
-  opacity: 1;
+  opacity: 0.7;
   margin-bottom: 0.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
@@ -2078,7 +2078,7 @@ pre code {
 }
 .form-control::placeholder {
   color: white;
-  opacity: 1;
+  opacity: 0.7;
   margin-bottom: 0.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
@@ -10196,8 +10196,8 @@ h3 {
 
 @media (min-width: 992px) {
   .masthead {
-    padding-top: calc(6rem + 104px);
-    padding-bottom: 6rem;
+    padding-top: 9em;
+    padding-bottom: 9rem;
   }
   .masthead .masthead-heading {
     font-size: 4rem;
@@ -10257,7 +10257,6 @@ h3 {
 }
 .floating-label-form-group input,
 .floating-label-form-group textarea {
-  font-size: 1.5em;
   position: relative;
   z-index: 1;
   padding-right: 0;
@@ -10267,7 +10266,7 @@ h3 {
   border-radius: 0;
   background: none;
   box-shadow: none !important;
-  font-size: 300%;
+  font-size: 300% !important;
 }
 .floating-label-form-group label {
   font-size: 2.75rem;
@@ -10282,6 +10281,7 @@ h3 {
   opacity: 0;
   text-align: center;
 }
+
 .floating-label-form-group:not(:first-child) {
   text-align: center;
 }
@@ -10308,4 +10308,49 @@ form .row:first-child .floating-label-form-group {
 
 .copyright {
   background-color: #1a252f;
+}
+
+#aware-logo {
+  height: 1.8em;
+  z-index: 2;
+}
+
+#politician {
+  height: 15em;
+}
+
+#fake-news-stops-here {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+#result {
+  padding-top: 0.5em;
+}
+
+#check {
+  font-weight: 300;
+  font-size: 2rem;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  padding-right: 0.3em;
+  padding-left: 0.3em;
+  border-style: solid;
+  border-color: #343a40;
+  border-radius: 8%;
+  margin-top: 1em;
+  color: #343a40;
+  border-width: 5px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+#check:hover {
+  background-color: #343a40;
+  color: white;
+  box-shadow: 0.5vh 0.5vh 2vh grey;
+}
+
+#input-box {
+
 }
