@@ -248,6 +248,12 @@ textarea {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
+  background-color: #D75745;
+  border: none;
+  color: white;
+  font-size: 300%;
+  text-align: center;
+  margin-top: 2%;
 }
 
 button,
@@ -10310,11 +10316,6 @@ form .row:first-child .floating-label-form-group {
   background-color: #1a252f;
 }
 
-#aware-logo {
-  height: 1.8em;
-  z-index: 2;
-}
-
 #politician {
   height: 15em;
 }
@@ -10351,6 +10352,12 @@ form .row:first-child .floating-label-form-group {
   box-shadow: 0.5vh 0.5vh 2vh grey;
 }
 
-#input-box {
-
+#aware-logo {
+  height: 1.8em;
+  z-index: 2;
 }
+
+#articletext{
+  background-color: green;
+}
+

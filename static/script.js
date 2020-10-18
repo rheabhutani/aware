@@ -5,17 +5,22 @@
 
   function init() {
     id("check-button").addEventListener("click", check);
-    console.log("hi");
+    
   }
 
   function check() {
+    let data = id("input-box").value;
+    console.log(data);
     id('input-box').innerHTML = "";
-    id("result").innerHTML = response;
-    console.log("bitch");
+    response(data);
   }
 
-  function response() {
-    return "real";
+  function response(data) {
+    // Code to get data from python
+    fetch("/")
+      .then((res)=>{console.log(res)})
+    let response = data;
+    id("result").innerHTML = data;
   }
 
   function id(id) {

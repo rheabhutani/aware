@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from forms import VerifyForm
 import numpy as np
 import pandas as pd
 import tensorflow as tf
@@ -7,12 +8,17 @@ from keras.preprocessing.sequence import pad_sequences
 from keras.utils import to_categorical
 import sys
 app = Flask(__name__)
+app.config['SECRET_KEY'] = "rheaandarjun"
 
 
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def result():
 	x = "The coronavirus has killed more than 200,000 people in the United States alone."
-	return predict([x])
+	global selected
+	post = request.args.get('post', 0)
+	return {'selected post': str(post)}
+	#return predict([x])
+	return "hello"
 
 def predict(text_input):
 	MAX_SEQUENCE_LENGTH = 5000
@@ -40,7 +46,9 @@ def predict(text_input):
 
 @app.route('/about')
 def about():
-	return render_template('index.html')
+	form = VerifyForm();
+	return render_template('index.html', form=form)
+
 
 if __name__ == '__main__':
     app.run()
