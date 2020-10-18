@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 from forms import VerifyForm
 import numpy as np
-import pandas as pd
 import tensorflow as tf
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
