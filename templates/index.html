@@ -47,12 +47,16 @@
                 <form action="" method="post">
                 <!--<form action="" method="post"><div class="form-group floating-label-form-group controls mb-0 pb-2">-->
                     <!--{{form.articletext.label}}-->
-                    {{form.articletext(class_="form-group floating-label-form-group controls mb-0 pb-2 floating-label-form-group-with-value", size=30,render_kw={"placeholder": "you@example.com"})}}
+                    {{form.articletext(class_="form-group floating-label-form-group controls mb-0 pb-2 floating-label-form-group-with-value", size=30, placeholder="paste article text here")}}
 
                     <!--<input class="form-control" id="input-box" placeholder="paste your article here"/>-->
+                    <div id="check-button"><h4 class= "text-lowercase mb-0" id="check">{{form.submit}}</h4></div>
                 <!--</div>--></form>
-                <div id="check-button"><h4 class= "text-lowercase mb-0" id="check">{{form.submit}}</h4></div>
-                <h4 class="masthead-heading text-lowercase mb-0" id="result"></h4>
+                
+                {% if realorfake|length %}
+                     <h4 class="masthead-heading text-lowercase mb-0" id="result">{{realorfake}}</h4>
+                {% endif %}
+               
 
 
 
@@ -464,7 +468,7 @@
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="static/scripts.js"></script>
-        <script src="static/script.js"></script>
+        <!--<script src="static/script.js"></script>-->
 
     </body>
 </html>

@@ -13,12 +13,12 @@ app.config['SECRET_KEY'] = "rheaandarjun"
 
 @app.route('/', methods=['GET','POST'])
 def result():
-	x = "The coronavirus has killed more than 200,000 people in the United States alone."
-	global selected
-	post = request.args.get('post', 0)
-	return {'selected post': str(post)}
-	#return predict([x])
-	return "hello"
+	form = VerifyForm()
+	realorfake = ""
+	if form.is_submitted():
+		result = request.form
+		realorfake = predict([result['articletext']])
+	return render_template('index.html', form=form, realorfake=realorfake)
 
 def predict(text_input):
 	MAX_SEQUENCE_LENGTH = 5000
@@ -35,18 +35,20 @@ def predict(text_input):
 	word_index = tokenizer.word_index
 	num_words = min(MAX_NUM_WORDS, len(word_index)) + 1
 	data = pad_sequences(sequences, 
-	                     maxlen=MAX_SEQUENCE_LENGTH, 
-	                     padding='pre', 
-	                 truncating='pre')
-	print(data[0])
+	                    maxlen=MAX_SEQUENCE_LENGTH, 
+	                    padding='pre', 
+	                 	truncating='pre')
 	integervalue = int(np.rint(model.predict( np.array( [data[0],] )  ))[0][0])
 	if integervalue == 0:
 		return "fake"
 	return "real"
 
-@app.route('/about')
+@app.route('/about', methods=['GET', 'POST'])
 def about():
-	form = VerifyForm();
+	form = VerifyForm()
+	if form.is_submitted():
+		result = request.form
+		print(result['articletext'])
 	return render_template('index.html', form=form)
 
 
