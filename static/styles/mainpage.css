@@ -248,12 +248,22 @@ textarea {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
-  background-color: #D75745;
+  background-color: transparent;
   border: none;
   color: white;
   font-size: 300%;
   text-align: center;
   margin-top: 2%;
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none !important;
+    outline-width: 0;
 }
 
 button,
@@ -10329,9 +10339,9 @@ form .row:first-child .floating-label-form-group {
   padding-top: 0.5em;
 }
 
-#check {
+#submit {
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 2rem !important;
   padding-top: 0.1em;
   padding-bottom: 0.1em;
   padding-right: 0.3em;
@@ -10346,10 +10356,11 @@ form .row:first-child .floating-label-form-group {
   cursor: pointer;
 }
 
-#check:hover {
+#submit:hover {
   background-color: #343a40;
   color: white;
   box-shadow: 0.5vh 0.5vh 2vh grey;
+
 }
 
 #aware-logo {
@@ -10357,7 +10368,5 @@ form .row:first-child .floating-label-form-group {
   z-index: 2;
 }
 
-#articletext{
-  background-color: green;
-}
+
 
