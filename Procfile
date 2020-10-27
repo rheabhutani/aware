@@ -1,1 +1,1 @@
-gunicorn awarewebsite:app
+web: gunicorn awarewebsite.py 
