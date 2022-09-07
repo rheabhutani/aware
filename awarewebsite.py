@@ -2,9 +2,9 @@ from flask import Flask, render_template, request
 from forms import VerifyForm
 import numpy as np
 import tensorflow as tf
-from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
-from keras.utils import to_categorical
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.utils import to_categorical
 import sys
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "rheaandarjun"
